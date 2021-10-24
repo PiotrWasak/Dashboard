@@ -7,10 +7,11 @@
   </div>
 </template>
 
+<script src="https://unpkg.com/feather-icons"></script>
 <script>
-
 import SideBar from './components/SideBar.vue'
 import NavBar from './components/NavBar.vue'
+
 
 export default {
   name: 'App',
@@ -22,12 +23,13 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  font-size: 0.875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
 }
 </style>
