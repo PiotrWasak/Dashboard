@@ -4,6 +4,12 @@
     <NavBar />
     <SideBar />
 
+    <dashboard-main>
+      <div class="container-fluid">
+        <Calc />
+      </div>
+    </dashboard-main>
+
   </div>
 </template>
 
@@ -11,13 +17,22 @@
 <script>
 import SideBar from './components/SideBar.vue'
 import NavBar from './components/NavBar.vue'
+import Calc from './components/calc/CalcBody.vue'
+import DashboardMain from './components/DashboardMain.vue'
 
 
 export default {
   name: 'App',
   components: {
     SideBar,
-    NavBar
+    NavBar,
+    Calc,
+    DashboardMain
+  },
+  data() {
+    return {
+      dashViews: ['Calc', 'CurrencyConverter', 'TODO', 'TicTacToe'],
+    }
   }
 }
 </script>

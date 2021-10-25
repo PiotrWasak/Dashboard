@@ -6,7 +6,7 @@
       <a
         class="navbar-brand col-md-3 col-lg-2 me-0 px-3"
         href="#"
-      >Company name</a>
+      >Piotr Wasak</a>
       <button
         class="navbar-toggler position-absolute d-md-none collapsed"
         type="button"
