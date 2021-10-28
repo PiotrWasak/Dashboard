@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <NavBar />
     <SideBar />
 
@@ -9,32 +8,32 @@
         <Calc />
       </div>
     </dashboard-main>
-
   </div>
 </template>
 
 <script src="https://unpkg.com/feather-icons"></script>
 <script>
-import SideBar from './components/SideBar.vue'
-import NavBar from './components/NavBar.vue'
-import Calc from './components/calc/CalcBody.vue'
-import DashboardMain from './components/DashboardMain.vue'
-
+import SideBar from "./components/SideBar.vue";
+import NavBar from "./components/NavBar.vue";
+import Calc from "calc/src/App.vue";
+import Todo from "todo/src/App.vue";
+import DashboardMain from "./components/DashboardMain.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     SideBar,
     NavBar,
+    Todo,
     Calc,
-    DashboardMain
+    DashboardMain,
   },
   data() {
     return {
-      dashViews: ['Calc', 'CurrencyConverter', 'TODO', 'TicTacToe'],
-    }
-  }
-}
+      dashViews: ["Calc", "CurrencyConverter", "TODO", "TicTacToe"],
+    };
+  },
+};
 </script>
 
 <style>
