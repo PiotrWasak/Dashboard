@@ -10,7 +10,9 @@
   "dependencies": {
     "calc": "git+https://github.com/PiotrWasak/Calculator.git",
     "core-js": "^3.6.5",
+    "currencyconverter": "git+https://github.com/PiotrWasak/CurrencyConverter.git",
     "feather-icons": "^4.28.0",
+    "sass-loader": "^12.3.0",
     "todo": "git+https://github.com/PiotrWasak/todo.git",
     "vue": "^2.6.11"
   },
