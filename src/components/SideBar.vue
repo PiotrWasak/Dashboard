@@ -1,50 +1,53 @@
 <template>
-  <div
-      id="sideBar"
-      class="container-fluid"
-  >
+  <div id="sideBar" class="container-fluid">
     <div class="row">
       <nav
-          id="sidebarMenu"
-          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+        id="sidebarMenu"
+        class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
       >
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a @click="changeDashView('Dashboard')"
-                  class="nav-link"
-                  aria-current="page"
-                  href="#"
+              <a
+                @click="changeDashView('Dashboard')"
+                class="nav-link"
+                aria-current="page"
+                href="#"
               >
                 <span data-feather="home"></span>
                 Dashboard
               </a>
             </li>
             <li class="nav-item">
-              <a @click="changeDashView('Calc')"
-                 class="nav-link"
-                 href="#"
-              >
+              <a @click="changeDashView('Calc')" class="nav-link" href="#">
                 <span data-feather="divide-circle"></span>
                 Calculator
               </a>
             </li>
             <li class="nav-item">
-              <a @click="changeDashView('CurrencyConverter')"
-                 class="nav-link"
-                 href="#"
+              <a
+                @click="changeDashView('CurrencyConverter')"
+                class="nav-link"
+                href="#"
               >
                 <span data-feather="dollar-sign"></span>
                 Currency Converter
               </a>
             </li>
             <li class="nav-item">
-              <a @click="changeDashView('Todo')"
-                 class="nav-link"
-                 href="#"
-              >
+              <a @click="changeDashView('Todo')" class="nav-link" href="#">
                 <span data-feather="check-circle"></span>
                 TODO
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                @click="changeDashView('CVGenerator')"
+                class="nav-link"
+                href="#"
+              >
+                <span data-feather="check-circle"></span>
+                CV Generator
               </a>
             </li>
           </ul>
@@ -55,20 +58,20 @@
 </template>
 
 <script>
-import * as feather from 'feather-icons'
+import * as feather from "feather-icons";
 
 export default {
-  name: 'SideBar',
-  emits: ['change-dash-view'],
+  name: "SideBar",
+  emits: ["change-dash-view"],
   methods: {
-    changeDashView: function(viewName){
+    changeDashView: function (viewName) {
       this.$emit("change-dash-view", viewName);
-    }
+    },
   },
   mounted() {
-    feather.replace({'aria-hidden': 'true'});
-  }
-}
+    feather.replace({ "aria-hidden": "true" });
+  },
+};
 </script>
 
 <style scoped>

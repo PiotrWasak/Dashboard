@@ -5,10 +5,13 @@
 
     <dashboard-main>
       <div class="container-fluid">
-        <div v-if="currentView==='Dashboard'">Dashboard Main</div>
+        <!-- <div v-if="currentView==='Dashboard'">Dashboard Main</div>
         <todo v-if='currentView==="Todo"' />
         <calc v-if='currentView==="Calc"'/>
-        <currency-converter v-if='currentView==="CurrencyConverter"'/>
+        <currency-converter v-if='currentView==="CurrencyConverter"'/> -->
+        <keep-alive>
+          <component :is="currentView"></component>
+        </keep-alive>
       </div>
     </dashboard-main>
   </div>
@@ -20,7 +23,8 @@ import SideBar from "./components/SideBar.vue";
 import NavBar from "./components/NavBar.vue";
 import Calc from "calc/src/App.vue";
 import Todo from "todo/src/App.vue";
-import CurrencyConverter from "currencyconverter/src/App.vue"
+import CVGenerator from "cv-generator/src/App.vue";
+import CurrencyConverter from "currencyconverter/src/App.vue";
 import DashboardMain from "./components/DashboardMain.vue";
 
 export default {
@@ -31,19 +35,20 @@ export default {
     Todo,
     Calc,
     DashboardMain,
-    CurrencyConverter
+    CurrencyConverter,
+    CVGenerator,
   },
   data() {
     return {
       dashViews: ["Calc", "CurrencyConverter", "Todo"],
-      currentView: 'Todo',
+      currentView: "Todo",
     };
   },
   methods: {
-    changeDashView: function(viewName) {
+    changeDashView: function (viewName) {
       this.currentView = viewName;
-    }
-  }
+    },
+  },
 };
 </script>
 
