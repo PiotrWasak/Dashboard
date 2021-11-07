@@ -5,13 +5,10 @@
 
     <dashboard-main>
       <div class="container-fluid">
-        <!-- <div v-if="currentView==='Dashboard'">Dashboard Main</div>
-        <todo v-if='currentView==="Todo"' />
-        <calc v-if='currentView==="Calc"'/>
-        <currency-converter v-if='currentView==="CurrencyConverter"'/> -->
-        <keep-alive>
-          <component :is="currentView"></component>
-        </keep-alive>
+<!--        <keep-alive>-->
+<!--        <component :is="currentView"></component>&ndash;&gt;-->
+<!--      </keep-alive>-->
+        <router-view></router-view>
       </div>
     </dashboard-main>
   </div>

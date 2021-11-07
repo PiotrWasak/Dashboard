@@ -2,52 +2,39 @@
   <div id="sideBar" class="container-fluid">
     <div class="row">
       <nav
-        id="sidebarMenu"
-        class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
       >
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a
-                @click="changeDashView('Dashboard')"
-                class="nav-link"
-                aria-current="page"
-                href="#"
-              >
-                <span data-feather="home"></span>
-                Dashboard
-              </a>
+                <router-link class="nav-link" to="/">
+              <span data-feather="home"></span>
+              Dashboard
+                </router-link>
             </li>
             <li class="nav-item">
-              <a @click="changeDashView('Calc')" class="nav-link" href="#">
-                <span data-feather="divide-circle"></span>
-                Calculator
-              </a>
+              <router-link class="nav-link" to="/calc">
+              <span data-feather="divide-circle"></span>
+              Calculator
+              </router-link>
             </li>
             <li class="nav-item">
-              <a
-                @click="changeDashView('CurrencyConverter')"
-                class="nav-link"
-                href="#"
-              >
-                <span data-feather="dollar-sign"></span>
-                Currency Converter
-              </a>
+              <router-link class="nav-link" to="/converter">
+              <span data-feather="dollar-sign"></span>
+              Currency Converter
+              </router-link>
             </li>
             <li class="nav-item">
-              <a @click="changeDashView('Todo')" class="nav-link" href="#">
-                <span data-feather="check-circle"></span>
-                TODO
-              </a>
+              <router-link class="nav-link" to="todo">
+              <span data-feather="check-circle"></span>
+              TODO
+              </router-link>
             </li>
             <li class="nav-item">
-              <a
-                @click="changeDashView('CVGenerator')"
-                class="nav-link"
-                href="#"
-              >
-                <span data-feather="check-circle"></span>
-                CV Generator
+              <a class="nav-link">
+              <span data-feather="check-circle"></span>
+              CV Generator
               </a>
             </li>
           </ul>
@@ -69,7 +56,7 @@ export default {
     },
   },
   mounted() {
-    feather.replace({ "aria-hidden": "true" });
+    feather.replace({"aria-hidden": "true"});
   },
 };
 </script>
@@ -127,4 +114,5 @@ export default {
   font-size: 0.75rem;
   text-transform: uppercase;
 }
+
 </style>

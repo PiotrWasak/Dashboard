@@ -18,7 +18,8 @@
     "feather-icons": "^4.28.0",
     "sass-loader": "^12.3.0",
     "todo": "git+https://github.com/PiotrWasak/todo.git",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.3"
   },
   "devDependencies": {
     "@types/feather-icons": "^4.7.0",
